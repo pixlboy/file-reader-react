@@ -24,7 +24,7 @@ class Filereader extends Component {
   async getFileContent() {
     axios.get(this.readFile, {
       params: {
-        filename: 'addresses.csv'
+        filename: 'uploaded.txt'
       }
     })
     .then(res => {

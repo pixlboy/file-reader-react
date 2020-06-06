@@ -4,6 +4,8 @@ let multer = require('multer')
 let cors = require('cors');
 let fs = require('fs');
 
+const filename = 'uploaded.txt';        //default file name, for demo only
+
 // middleware to fulfil requests coming from other server
 app.use(cors())
 
@@ -15,7 +17,7 @@ let storage = multer.diskStorage({
     cb(null, 'public')
   },
   filename: function (req, file, cb) {
-    cb(null, file.originalname )
+    cb(null, filename )
   }
 })
 
@@ -38,7 +40,6 @@ app.post('/upload',function(req, res) {
 
 // read the contents of file sent in query params and send as array 
 app.get('/read',function(req, res) {
-    const filename = req.query.filename;
     fs.readFile(`./public/${filename}`, 'utf8', function(err, contents) {
         const splitContents = contents ? contents.split('\n') : [];
         res.send(splitContents);

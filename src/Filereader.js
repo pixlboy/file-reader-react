@@ -24,7 +24,7 @@ class Filereader extends Component {
   async getFileContent() {
     axios.get(this.readFile, {
       params: {
-        filename: 'users.txt'
+        filename: 'addresses.csv'
       }
     })
     .then(res => {
@@ -98,7 +98,7 @@ class Filereader extends Component {
           <form>
             <div className="row">
               <div className="col">
-                <label className="float-left">Select file:</label>
+                <label className="float-left">Select file (csv,txt)</label>
                 <input type="file" className="btn btn-light" name="file" onChange={this.selectFile}/>
               </div>
               <div className="col">
@@ -106,11 +106,11 @@ class Filereader extends Component {
                 <button type="button" className="btn btn-primary form-control" onClick={this.getFileContent}>Read</button>
               </div>
               <div className="col">
-                <label className="float-left">Delimiter:</label>
+                <label className="float-left">Limit by</label>
                 <input type="text" name="delimiter" className="form-control" value={this.state.delimiter} onChange={this.handleDelimitChange} />
               </div>
               <div className="col">
-                <label className="float-left">Lines:</label>
+                <label className="float-left">Rows to show</label>
                 <input type="text" name="lines" className="form-control" value={this.state.defaultLines} onChange={this.handleLimitChange}/>
               </div>
             </div>

@@ -1,5 +1,23 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Run application
+
+1. clone the repo in your system
+2. run command 'npm install'
+3. run command 'nodemon server' to start the node server
+4. run command 'npm start' to launch UI
+5. upload any file (csv, txt) with legitimate content as below
+7. click read button to see the contents
+
+### Formats accepted
+
+John,Doe,120 jefferson st.,Riverside, NJ, 08075
+Jack,McGinnis,220 hobo Av.,Phila, PA,09119
+"John ""Da Man""",Repici,120 Jefferson St.,Riverside, NJ,08075
+Stephen,Tyler,"7452 Terrace ""At the Plaza"" road",SomeTown,SD, 91234
+,Blankman,,SomeTown, SD, 00298
+"Joan ""the bone"", Anne",Jet,"9th, at Terrace plc",Desert City,CO,00123
+
 ## Available Scripts
 
 In the project directory, you can run:

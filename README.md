@@ -7,10 +7,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 3. run command 'nodemon server' to start the node server
 4. run command 'npm start' to launch UI
 5. upload any file (csv, txt) with legitimate content as below
-6. navigate to `src/Filereader.js` file and change the filename on line 27 to file uploaded (default addresses.csv)
 7. click read button to see the contents
 
-### formats accepted
+### Formats accepted
 
 John,Doe,120 jefferson st.,Riverside, NJ, 08075
 Jack,McGinnis,220 hobo Av.,Phila, PA,09119
